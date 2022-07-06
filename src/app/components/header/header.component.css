@@ -1,0 +1,33 @@
+
+
+nav ul{
+    display: contents;
+    list-style-type: none;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Patua One', cursive;
+    font-size: 25px;
+}
+a:hover{
+    color: rgb(227, 224, 224)
+}
+.logo{
+    font-size: 2rem;
+padding-left: 25px;
+}
+.cart{
+padding-right: 25px;
+}
+.number
+{
+    padding: 0px 2px 0px 2px;
+    background-color: red;
+    font-size: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left:5px
+}

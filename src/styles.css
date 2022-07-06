@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Arima&family=Arvo:ital@1&family=Joan&family=Patua+One&family=Poppins:wght@900&family=Roboto+Slab:wght@300&display=swap');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}

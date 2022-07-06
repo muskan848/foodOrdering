@@ -1,0 +1,86 @@
+
+.page div img{
+    height: 65vh;
+    width: 37rem;
+    border-radius: 25px;
+    margin: 90px 0px 0px 115px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+}
+.content
+{
+    margin: 120px;
+    margin-left: 90px;
+}
+
+.page{
+    font-family: 'Patua One', cursive;
+    display: flex;
+   
+}
+.favorite{
+    float: right;
+    margin-top: -71px;
+    font-size: 55px;
+    cursor: pointer;
+    color: red;
+}
+
+.favorite.not{
+    color: gray;
+}
+.name{
+    font-size: 45px;
+    color: rgb(79, 78, 78);
+}
+.rating{
+    padding: 0px 0px 8px 0px;
+    font-size: 39px;
+    color: rgb(231, 201, 32);
+}
+.tag{
+    cursor: pointer;
+    margin-top: -50px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: left;
+}
+.origin
+{
+    color: white;
+    font-weight: 100;
+    background-color: #6e6b6b;
+    display: inline-block;
+    padding: 0px 9px 0px 9px;
+    border-radius: 13px;
+
+}
+.price{
+    margin-top: 16px;
+    font-size: 27px;
+    color: rgb(116, 111, 111);
+    font-weight: lighter;
+}
+.color{
+    color: green;
+}
+.cookTime{
+    font-size: 22px;
+    color: #3c3b3b;
+}
+.addToCart{
+    border: none;
+    width: 14rem;
+    margin-top: 40px;
+    background-color: #ffca2d;
+    height: 35px;
+    border-radius: 13px;
+    font-size: 20px;
+    color: darkslategrey;
+}
+.addToCart1{
+    margin-left: 60px;
+}
+.addToCart:hover{
+    background-color: orange
+}

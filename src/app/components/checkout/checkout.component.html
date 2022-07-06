@@ -1,0 +1,231 @@
+<div class="page">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Your cart</span>
+                    <span class="badge badge-secondary badge-pill">{{cart.items.length}}</span>
+                </h4>
+
+                <ul class="list-group mb-3">
+                    <div *ngFor="let cartItem of cart.items">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">{{cartItem.food.name}}</h6>
+
+                            </div>
+                            <span class="text-muted">{{cartItem.food.price|currency:"&#8377;"}}</span>
+                        </li>
+                    </div>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                            <h6 class="my-0">Promo code</h6>
+                            <small>EXAMPLECODE</small>
+                        </div>
+                        <span class="text-success">-{{29|currency:"&#8377;"}}</span>
+                    </li>
+
+                    <form class="card p-2">
+                        <div class="input-group">
+                            <input #form type="text" class="form-control" placeholder="Promo code">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-secondary"
+                                    (click)="code(form.value)">Redeem</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total price</span>
+                        <div *ngIf="offer===false">
+                            <strong>{{cart.totalPrice|currency:"&#8377;"}}</strong>
+                        </div>
+                        <div *ngIf="offer===true">
+                            <strong>{{cart.totalPrice-29|currency:"&#8377;"}}</strong>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Billing address</h4>
+                <form [formGroup]="billingForm" (ngSubmit)="submit()">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input formControlName="firstname" type="text" class="form-control"
+                                placeholder="First name">
+
+                            <span style="color: red;"
+                                *ngIf="firstname && firstname.invalid && firstname.touched">Incorrect value</span>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input formControlName="lastname" type="text" class="form-control" placeholder="Last name">
+
+                            <span style="color: red;" *ngIf="lastname && lastname.invalid && lastname.touched">Incorrect
+                                value</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input formControlName="email" type="email" class="form-control" placeholder="Email">
+                        <span style="color: red;" *ngIf="email && email.invalid && email.touched">Enter a valid email
+                            address</span>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <input formControlName="phone" type="text" class="form-control" placeholder="Phone no.">
+                        <span style="color: red;" *ngIf="phone && phone.invalid && phone.touched">Enter a valid phone
+                            number</span>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <input formControlName="address" type="text" class="form-control" placeholder="Address"
+                            required>
+                        <span style="color: red;" *ngIf="address && address.invalid && address.touched">Missing
+                            value</span>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <input formControlName="country" type="text" class="form-control" placeholder="Country">
+                            <span style="color: red;" *ngIf="country && country.invalid && country.touched">Incorrect
+                                value</span>
+
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <input formControlName="state" type="text" class="form-control" placeholder="State">
+                            <span style="color: red;" *ngIf="state && state.invalid && state.touched">Incorrect
+                                value</span>
+
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <input formControlName="zip" type="text" class="form-control" placeholder="Zip">
+                            <span style="color: red;" *ngIf="zip && zip.invalid && zip.touched">Incorrect
+                                value</span>
+
+                        </div>
+                    </div>
+                </form>
+
+                <hr class="mb-4">
+                <h4 class="mb-3">Payment</h4>
+
+                <form [formGroup]="payForm" (ngSubmit)="submit()">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" (click)="toggleShow()" />
+                        <label> Cash On Delivery</label>
+                    </div>
+
+                    <br>
+
+                    <div *ngIf="isShown">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="cc-name">Name on card</label>
+                                <input formControlName="name" type="text" class="form-control" id="cc-name"
+                                    placeholder="" required>
+                                <small class="text-muted">Full name as displayed on card</small>
+                                <span style="color: red;" *ngIf="name && name.invalid && name.touched">incorrect
+                                    value</span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cc-number">Credit card number</label>
+                                <input formControlName="credit" type="text" class="form-control" id="cc-number"
+                                    placeholder="" required>
+                                <span style="color: red;" *ngIf="credit && credit.invalid && credit.touched">incorrect
+                                    value
+                                </span>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="cc-expiration">Expiration</label>
+                                <input formControlName="expire" type="text" class="form-control" id="cc-expiration"
+                                    placeholder="" required>
+                                <span style="color: red;" *ngIf="expire && expire.invalid && expire.touched">incorrect
+                                    value
+                                </span>
+
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="cc-expiration">CVV</label>
+                                <input formControlName="cvv" type="text" class="form-control" id="cc-cvv" placeholder=""
+                                    required>
+                                <span style="color: red;" *ngIf="cvv && cvv.invalid && cvv.touched">incorrect
+                                    value
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+
+                </form>
+
+                <button *ngIf="isShown" class="button" [disabled]="billingForm.invalid || payForm.invalid"
+                    (click)="openModal1()" type="button">Order
+                    Now</button>
+
+                <button *ngIf="!isShown" class="button" [disabled]="billingForm.invalid" (click)="openModal1()"
+                    type="button">Order
+                    Now</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
+<!-- promo code modal -->
+<div class="modal animated fadeInRight" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+    <div class="modal-dialog modal-frame modal-top modal-notify modal-success modal-dialog-centered" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">CONGRATULATIONS!</h4>
+                <button type="button" class="close" aria-label="Close" id="cancel" (click)="onCloseHandled()"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+
+            <div class="modal-body">
+
+                YOU SAVED ₹29 😄😄😄😄
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- order successfull modal -->
+
+<div class="modal animated fadeInRight" tabindex="-1" role="dialog" [ngStyle]="{'display':display1}">
+    <div class="modal-dialog modal-frame modal-top modal-notify modal-success modal-dialog-centered" role="document">
+
+        <div class="modal-content">
+            <div>
+                <img class="imagee" src="https://thumbs.dreamstime.com/b/check-mark-symbol-box-icon-135442001.jpg"
+                    alt="">
+                <div class="thanku">Thankyou!</div>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <p class="modal-title1"> Your order is being processed.
+                </p>
+                <p class="modal-title1"> You will be receiving a confirmation email with
+                    order details.</p>
+                <button type="button" class="close" aria-label="Close" id="cancel"
+                    (click)="onCloseHandled1()">ok</button>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

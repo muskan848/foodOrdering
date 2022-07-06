@@ -1,0 +1,31 @@
+.outer{
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    font-family: 'Patua One', cursive;
+
+}
+
+div input{
+    font-size: 16px;
+    border-radius: 23px 0px 0px 23px;
+    height: 45px;
+    width: 260px;
+    padding-left: 17px;
+    border: 0px;
+    background-color: gainsboro;
+    outline: none;
+}
+
+div button{
+    border-radius: 0px 23px 23px 0px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgb(37, 36, 36);
+    color: white;
+    border: 1px rgb(37, 36, 36) ;
+}
+
+div button:hover{
+background-color:black
+}

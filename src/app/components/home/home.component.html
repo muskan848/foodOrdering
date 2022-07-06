@@ -1,0 +1,35 @@
+<app-search></app-search>
+<app-tag></app-tag>
+<app-not-found [visible]="!foodItems || foodItems.length<=0" resetLinkText="Try Something Else!">
+</app-not-found>
+
+<ul class="container">
+
+    <!-- food is present -->
+    <li *ngFor="let item of foodItems">
+        <a routerLink="/food/{{item.id}}">
+            <img src="{{item.imageUrl}}">
+            <div class="content">
+                <div class="name"> {{item.name}}</div>
+                <span class="favorite {{item.fav?'':'not'}}"> ♥ </span>
+                <div class="rating">
+                    <ngb-rating [max]="5" [(rate)]="item.star" [readonly]="false"></ngb-rating>
+                </div>
+                <div class="footer">
+                    <div class="origin">
+                        <span *ngFor="let origin of item.origins">
+                            {{origin}}
+                        </span>
+                    </div>
+                    <div class="cookTime">
+                        <span>🕐</span>
+                        {{item.cookTime}}
+                    </div>
+                    <div class="price">{{item.price|currency:"&#8377;"}}</div>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
+
+<app-footer></app-footer>

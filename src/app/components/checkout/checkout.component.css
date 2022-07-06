@@ -1,0 +1,76 @@
+
+  .container{
+       margin-top: 3rem;
+        font-family: 'Patua One', cursive;
+        padding: 2rem;
+  }
+  .page{
+    background-color: rgb(250, 250, 250);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }  
+  
+  .modal{
+    background: rgba(0, 0, 0, 0.712);
+    
+}
+.button{
+    border: none;
+    width: 100%;
+    height: 36px;
+    border-radius: 9px;
+    background-color: rgb(247, 169, 23);
+}
+.button:hover{
+    background-color: rgb(242, 157, 0);
+}
+.modal{
+  font-family: 'Patua One', cursive;
+
+}
+.modal-title1
+{
+  color: gray;
+
+}
+.imagee{
+
+  height: 190px;
+  width: 62px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 190px;
+}
+.thanku
+{
+  display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+.modal-body button{
+    border: none;
+    width: 100%;
+    height: 25px;
+    border-radius: 9px;
+    background-color: rgb(247, 169, 23);
+}
+.modal-body button:hover{
+  background-color: rgb(242, 157, 0);
+}
+span{
+  color: #ff3f3f;
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+button:disabled{
+  background-color: rgb(243, 179, 61);
+  color: rgb(71, 71, 71);
+}
+button:disabled:hover{
+  background-color: rgb(243, 179, 61);
+  color: rgb(71, 71, 71);
+}

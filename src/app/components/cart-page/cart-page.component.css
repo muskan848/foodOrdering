@@ -1,0 +1,142 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 1.5rem;
+  margin-top: 0.5rem;
+}
+ul li div a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    font-family: 'Patua One', cursive;
+    display: flex;
+    flex-direction: column;
+    flex: 3 0;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    list-style: none;
+    margin: 0.5rem;
+    padding: 0;
+    background-color: #fefefe;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+ul li:last-child{
+  border: none;
+}
+
+li img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100rem;
+  object-fit: cover;
+}
+
+li div{
+  padding: 1rem;
+}
+
+li div:not(:first-child){
+  flex-basis: 18%;
+}
+
+li select{
+  width: 3rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+li .remove-button{
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem;
+  color: #e72929;
+  opacity: 0.7;
+  outline: none;
+}
+
+li .remove-button:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.checkout{
+ font-family: 'Patua One', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex:1 3;
+  height: 20rem;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: #fefefe;
+
+}
+
+.checkout>div{
+  font-size: 1.4rem;
+  margin: 1rem;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.foods-count{
+  margin-bottom: 1.5rem;
+}
+
+.foods-count::before{
+  content:"Total Products:  ";
+  color: grey;
+}
+
+.total-price::before{
+  content: 'Total Price:  ';
+  color: grey;
+}
+
+.checkout a{
+  padding: 1rem;
+  color: white;
+  background:#e72929;
+  display: block;
+  width: 99%;
+  border-radius: 1rem;
+  text-align: center;
+  opacity: 0.9;
+  justify-self: center;
+  text-decoration: none;
+  height: 3rem;
+}
+
+.checkout a:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.image{
+background-image: url('https://media.istockphoto.com/vectors/empty-shopping-bag-icon-cute-disappointed-shopping-bag-flat-thin-line-vector-id841884438?k=20&m=841884438&s=612x612&w=0&h=yi6txQa52uAXEaKRLuijrmzYAT8GQrrv8NhHSD7lMOE=');
+background-repeat: no-repeat;
+margin-left: 13rem;
+padding-left: 20rem;
+font-size: large;
+}

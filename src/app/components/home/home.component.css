@@ -1,0 +1,65 @@
+a{
+    font-family: 'Patua One', cursive;
+    text-decoration: none;
+    color: black;
+    display: table-caption;
+    margin: 39px;
+    margin-top: 80px;
+   border-radius: 25px;
+   transition: transform .60s ease;
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+} 
+.image
+{
+    background-image: url('https://2aj47i3u0emv3rfnwz2zoyfm-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/america.jpg');
+}
+a:hover{
+    transform: scale(1.08);
+}
+
+li a img{
+    height: 260px;
+    width: 330px;
+    border-radius: 25px 25px 0px 0px;
+}
+li{
+    display: inline;
+}
+.content{
+    padding: 25px;
+    display: inline-block;
+    width: 330px;
+    height: 170px;
+}
+.favorite{
+    color: red;
+    float: right;
+    margin-top: -40px;
+    font-size: 30px;
+}
+.favorite.not{
+    color: black;
+}
+.name{
+    font-size: 25px;
+    color: rgb(79, 78, 78);
+}
+.rating{
+    font-size: 24px;
+    color: rgb(231, 201, 32);
+}
+.origin
+{
+    color: grey;
+    font-weight: 100;
+}
+.cookTime{
+    font-size: 16px;
+    font-weight: 450;
+}
+.price{
+    margin-left: 14rem;
+    margin-top: -22px;
+    font-size: 18px;
+    font-weight: 400;
+}
