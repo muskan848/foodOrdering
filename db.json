@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signup": [
+    {
+      "firstname": "Muskan",
+      "lastname": "Mittal",
+      "phone": "070 0902 7408",
+      "email": "muskanmittal848@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "firstname": "Muskan",
+      "lastname": "Mittal",
+      "phone": "070 0902 7408",
+      "email": "muskanmittal848@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "firstname": "ayush",
+      "lastname": "kalra",
+      "email": "test@gmail.com",
+      "phone": "7009027408",
+      "password": "12345",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

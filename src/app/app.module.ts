@@ -12,9 +12,10 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { FoodPageComponent } from './components/food-page/food-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HeadComponent } from './components/head/head.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -27,9 +28,9 @@ import { LoginComponent } from './components/login/login.component';
     FoodPageComponent,
     NotFoundComponent,
     FooterComponent,
-    HeadComponent,
     CheckoutComponent,
     LoginComponent,
+    SignupComponent,
 
   ],
   imports: [
@@ -37,7 +38,8 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

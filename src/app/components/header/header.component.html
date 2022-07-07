@@ -1,9 +1,11 @@
 <header>
     <nav class="navbar navbar-dark bg-dark">
         <ul>
-            <li><a routerLink="/" class="logo">FOOD CORNER</a></li>
+            <li><a routerLink="/home" class="logo">FOOD CORNER</a></li>
 
-            <li><a routerLink="/cart-page" class="cart">🛒 CART<span class="number">{{cart.items.length}}</span></a>
+            <li><a class="logout" routerLink="">Logout</a></li>
+
+            <li><a routerLink="/cart-page" class="cart"> CART 🛒<span class="number">{{cart.items.length}}</span></a>
             </li>
         </ul>
     </nav>

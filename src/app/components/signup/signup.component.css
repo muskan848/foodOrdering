@@ -1,0 +1,28 @@
+section{
+        font-family: 'Patua One', cursive;
+
+}
+span{
+    color: #fe2e2e;
+    float: left;
+    font-size: 13px;
+    font-weight: lighter;
+}
+.button{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #70a6d3;
+    color: black;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+}
+.button:hover{
+    background-color: #5098d3;
+
+}
+.button:disabled{
+    background-color: #86bbe7;
+    color: gray;
+
+}

@@ -1,0 +1,100 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-image" style="
+          background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+          height: 300px;
+          "></div>
+    <!-- Background image -->
+
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+        <div class="card-body py-5 px-md-5">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-5">Sign up now</h2>
+                    <form [formGroup]="signupForm" (ngSubmit)="submit()">
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <input formControlName="firstname" type="text" class="form-control"
+                                        placeholder="First name" />
+                                    <span *ngIf="firstname && firstname.invalid && firstname.touched">Invalid
+                                        first name</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <input formControlName="lastname" type="text" class="form-control"
+                                        placeholder="Last name" />
+                                    <span *ngIf="lastname && lastname.invalid && lastname.touched">Invalid last
+                                        name</span>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- phone no. input -->
+                        <div class="form-outline mb-4">
+                            <input formControlName="phone" type="text" class="form-control"
+                                placeholder="Mobile Number" />
+                            <span *ngIf="phone && phone.invalid && phone.touched">Invalid phone number</span>
+                            <br>
+                        </div>
+
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input formControlName="email" type="email" class="form-control"
+                                placeholder="Email address" />
+                            <span *ngIf="email && email.invalid && email.touched">Invalid email address</span>
+                            <br>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input formControlName="password" type="password" class="form-control"
+                                placeholder="Password" />
+                            <span *ngIf="password && password.invalid && password.touched">password should have atleast
+                                5
+                                letters</span>
+                        </div>
+
+
+                        <br>
+                        <!-- Submit button -->
+                        <button [disabled]="signupForm.invalid" type="submit" class="button">
+                            Sign up
+                        </button>
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <p>or sign up with:</p>
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->

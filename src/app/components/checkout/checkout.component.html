@@ -130,7 +130,7 @@
                                 <label for="cc-name">Name on card</label>
                                 <input formControlName="name" type="text" class="form-control" id="cc-name"
                                     placeholder="" required>
-                                <small class="text-muted">Full name as displayed on card</small>
+
                                 <span style="color: red;" *ngIf="name && name.invalid && name.touched">incorrect
                                     value</span>
                             </div>
@@ -222,6 +222,9 @@
                     order details.</p>
                 <button type="button" class="close" aria-label="Close" id="cancel"
                     (click)="onCloseHandled1()">ok</button>
+
+                <a routerLink="/home"><button type="button" class="aa" aria-label="Close" id="cancel">Explore
+                        More..</button></a>
 
             </div>
 

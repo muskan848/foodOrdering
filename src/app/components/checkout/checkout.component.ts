@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { Cart } from '../../shared/cart';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class CheckoutComponent implements OnInit {
   view: string = 'disabled'
 
   cart!: Cart
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.cart = this.cartService.getCart();
@@ -56,6 +57,9 @@ export class CheckoutComponent implements OnInit {
   }
   openModal1() {
     this.display1 = "block";
+    this.billingForm.reset();
+    this.payForm.reset();
+
   }
   onCloseHandled1() {
     this.display1 = "none";

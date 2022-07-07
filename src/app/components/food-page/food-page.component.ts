@@ -32,7 +32,7 @@ export class FoodPageComponent implements OnInit {
   }
   addToCart1() {
     this.cartService.addToCart(this.food);
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/home');
 
   }
   favFun() {
